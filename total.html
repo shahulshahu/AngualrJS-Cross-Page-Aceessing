@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title> Restaurant Bill</title>
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+
+<body style="text-align:center;">
+<h1> Happy Restaurant</h1><br><br>
+
+
+
+<script>
+var app=[];
+ app=localStorage.getItem("array");
+var newargs = localStorage.getItem("argsarray");
+ alert(newargs);
+
+
+</script>
+
+<p id="demo">
+<p> Customer name : <span id="0"></span></p> 
+<p> Item Ordered : <span id="1"></span></p>
+<p>Cost : <span id="2"></span></p><p>Service tax : <span id="3"></span></p><p>VAT : <span id="4"></span></p><p>Swachh bharath tax : <span id="5"></span> </p><p>Total Cost : <span id="6"></span></p>
+</p>
+
+<script>
+var array2=[];
+var array3=[];
+var finalarray=[];
+array2=app.split(",");
+array3=newargs.split(",");
+finalarray=array3.concat(array2);
+for(var i=0;i<finalarray.length;i++){
+document.getElementById(i).innerHTML=finalarray[i];
+}
+
+</script>
+
+     </body>
+</html>
